@@ -1,38 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400&display=swap');
+
 .App {
-  text-align: center;
+  background-image: url('./Images/Rectangle.svg'); /* Replace with the actual path to your SVG */
+  background-color: #171717;
+  background-size: cover; /* Ensures the SVG covers the entire background */
+  background-repeat: no-repeat; /* Prevents the background from repeating */
+  background-position: center; /* Centers the background image */
+  height: 100vh;               
+  width: 100vw;     
+  overflow: hidden;
+  z-index: -1;
+  opacity: 1;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button{
+  position: absolute;
+  z-index: 2;
+  top: 13%;
+  left: 9.3%;
+  width: 18.5%;
+  height: 7.5%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; 
+  overflow: hidden; 
+}
+.pay{
+  position: absolute;
+  z-index: 1;
+  width: 40%;
+  height: 5%;
+  top: 82%;
+  color:#FFFFFF;
+  left: 9.3%;
+  font-family: 'Space Mono';
+  font-size: 26px;        
+  font-weight: 400;   
+}
+.dev{
+  position: absolute;
+  z-index: 1;
+  width: 70%;
+  height: 5%;
+  top: 30%;
+  color:#FFFFFF;
+  left: 9.3%;
+  font-family: 'Sora';
+  font-size: 90px;        
+  font-weight: 700;   
+}
+.company{
+  position: absolute;
+  z-index: 1;
+  width: 8%;
+  top: 75%;
+  height: 5%;
+  color:#FFFFFF;
+  left:9.3%;
+  font-family: 'Space Mono';
+  font-size: 26px;        
+  font-weight: 400;   
+  opacity: 0.7;
+}
+@media (max-width: 768px) {
+  .pay {
+    font-size: 18px; /* Adjusted font size for mobile */
+    width: 80%;
+  }
+
+  .dev {
+    font-size: 40px; /* Adjusted font size for mobile */
+  }
+
+  .company {
+   
+    font-size: 20px; /* Adjusted font size for mobile */
+  }
+}
+.rec {
+  position: absolute;
+  top: 1%;
+  left: 3%;
+  width: 37%;
+  height: 66%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  overflow: hidden; 
 }
 
-.App-link {
-  color: #61dafb;
+.circular-image {
+  width: 100%;
+  height: auto;
+  max-height: 100%; 
+  display: block; 
+}
+.ellipse {
+  position: absolute;
+  z-index: 3;
+  width: 35%;
+  height: 59%;
+  top: 84%;
+  left: 55%;
+  background: #A287F4;
+  border-radius: 50%; /* This creates the ellipse shape */
+  opacity: 0.8; /* Adjusted opacity without 'px' */
+  backdrop-filter: blur(223.62px); /* Blur effect */
+  display: flex; /* This allows for gap and alignment */
+  align-items: center; /* Aligns children vertically */
+  justify-content: center; /* Aligns children horizontally */
+  transform: rotate(33.88deg); /* Rotates the ellipse */
+  filter: blur(150px);
+}
+.ellipse1 {
+  position: absolute;
+  z-index: 3;
+  width: 37%;
+  height: 59%;
+  top: -60%;
+  left: 24%;
+  background: #12E6C8;
+  border-radius: 50%; /* This creates the ellipse shape */
+  opacity: 0.8; /* Adjusted opacity without 'px' */
+  backdrop-filter: blur(223.62px); /* Blur effect */
+  display: flex; /* This allows for gap and alignment */
+  align-items: center; /* Aligns children vertically */
+  justify-content: center; /* Aligns children horizontally */
+  gap: 0; /* No gap between children */
+  transform: rotate(22.69deg); /* Rotates the ellipse */
+  filter: blur(150px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
